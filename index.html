@@ -334,20 +334,5 @@
           scrollOffset: 50
         });
       </script>
-
-    <?php
-      if(isset($_POST['Submit'])) {
-        $name = $_POST['name'];
-        $email = $_POST['email'];
-        $phone = $_POST['phone'];
-        $message = $_POST['message'];
-
-        include_once("config.php");
-
-        $result = mysqli_query($mysqli, "INSERT INTO user(name,email,phone,message) VALUES('$name','$email','$phone', '$message')");
-
-        echo "User added successfully. <a href='index.php'>View Users</a>";
-      }
-    ?>
     </body>
   </html>
